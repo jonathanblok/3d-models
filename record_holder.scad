@@ -1,16 +1,8 @@
-translate([0,0,-5]){
-    difference(){
-        cube([200,15,15]){}
-        translate([-1,7.5,9.8]){
-            cube([302,5,6]){}
+difference(){
+    cube([200,20,15]){}
+    rotate([10,0,0]){
+        translate([-2,6,4.95]){
+            cube([302,12,18]){}
         }
-        rotate([20,0,0]){
-            translate([-2,10.1,4.95]){
-                cube([302,5,8]){}
-            }
-        }
-        translate([-1,-1,-1]){
-            cube([202,17,6]){}
-        }    
-    }
+    }  
 }

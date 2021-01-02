@@ -1,20 +1,20 @@
-cube_x = 5;
-cube_y = 20;
-cube_z = 4;
+post_card_x = 149;
+post_card_y = 104;
+
+cube_x = post_card_x + 10;
+cube_y = post_card_y + 10;
+cube_z = 1;
 
 module asterisk() {
-    linear_extrude(4) text(text = "*", size = 35);
+    linear_extrude(4) text(text = "*", size = 25);
 };
 
-
-
 difference(){
-    cube([400,200,2]);
-    rotate([0,0,23]) translate([110,100,-1]) asterisk();
-    rotate([0,0,2]) translate([100,25,-1]) asterisk();
-    rotate([0,0,40]) translate([190,-110,-1]) asterisk();
-    translate([190,120,-1]) asterisk();
-    translate([330,150,-1]) asterisk();
-    rotate([0,0,0]) translate([160,70,-1]) asterisk();
-    rotate([0,0,-20]) translate([280,160,-1]) asterisk();
+    cube([cube_x,cube_y,cube_z]);
+    
+    for (i = [-5 : 8]){
+        for ( j = [0 : 5] ){
+            translate([(i*20)+j*15,-2+j*17,-1]) asterisk();
+        }    
+    }
 }

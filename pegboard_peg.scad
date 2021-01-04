@@ -15,7 +15,7 @@ union() {
  translate([-(peg_width/2),0,0]) cube([peg_width/2, 44, peg_width]);
  
  //transverse block
- translate([-(peg_width/2),20,0]) cube([10.5, peg_width, peg_width]);
+ translate([-(peg_width/2),24,0]) cube([10.5, peg_width, peg_width]);
 
 //lower hook
  translate([-(44/2),43.5,0]) difference(){

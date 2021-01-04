@@ -17,7 +17,7 @@ difference(){
     }
     // here come the steps
     translate([-1,10,4]){
-                cube([302,6,1]){}
+                cube([302,6 ,1]){}
     }
     translate([-1,15,3]){
                 cube([302,3,2]){}

@@ -3,9 +3,9 @@ peg_width = 44;
 union() {
  // upper hook
  translate([160/2-peg_width/2,0,0]) difference(){
-   cylinder(h=peg_width, d=160);
+   cylinder(h=peg_width, d=160, $fn=200);
    translate([0,0,-1]) cylinder(h=46, d=160-peg_width);
-   translate([0,0,0]) cube();
+   translate([-(160/2-peg_width/2),0,-1]) cube([150,200,peg_width+2]);
  }
  
  //connector block
@@ -16,8 +16,8 @@ union() {
 
 //lower hook
  translate([-(440/2),435,0]) difference(){
-   cylinder(h=peg_width, d=440);
+   cylinder(h=peg_width, d=440, $fn=200);
    translate([0,0,-1]) cylinder(h=46, d=440-peg_width);
-   translate([0,0,0]) cube();
+   translate([-(440/2),-435,-1]) cube([440,435,peg_width+2]);
  }
 }

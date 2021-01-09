@@ -8,6 +8,10 @@ offset_x = (outer_x - inner_x) / 2;
 offset_y = (outer_y - inner_y) / 2;
 avg_offset = (offset_x + offset_y) / 2;
 
+/*
+
+*/
+
 translate([0,0,0])
 {
  rotate([0,0,0])
@@ -28,6 +32,12 @@ translate([0,0,0])
   }
  }
 }
+
+/*
+TODO: Add space for button
+TODO: Add a locking mechanism in shaft using pinx
+TODO: Add space for E14 fitting 
+*/
 
 translate([0,60,0])
 {

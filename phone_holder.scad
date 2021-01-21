@@ -1,8 +1,8 @@
-overall_width = 70;
-inside_width = 63;
-inside_depth = 0;
-base_height = 10;
-overall_height = 100;
+overall_width = 70.0;
+inside_width = 63.0;
+inside_depth = 0.0;
+base_height = 10.0;
+overall_height = 100.0;
 
 union(){
     // Top part and arm
@@ -10,9 +10,13 @@ union(){
         cube([10,overall_width,20]){}
         diff_inner_outer = overall_width - inside_width;
         offset_comp_inner_outer = diff_inner_outer / 2.0;
-        translate([0,offset_comp_inner_outer,-2]) cube([10,inside_width,20]){}
+        //translate([0,offset_comp_inner_outer,-2]) cube([10,inside_width,20]){}
     }
     
+    // "Hands" 
+    cube([0,0,0]);
+    
+    // Main T-shape
     cube([40,10,20]){}
     translate([0,overall_width,0]) cube([40,10,20]){}    
     translate([0,30,0]) cube([10,20,overall_height]){}

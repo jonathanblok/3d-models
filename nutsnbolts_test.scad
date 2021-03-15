@@ -1,4 +1,4 @@
-include <nutsnbolts/cyl_head_bolt.scad>;
+include <lib/cyl_head_bolt.scad>;
 
 
 rotate([0,180,0]) difference() {

@@ -36,7 +36,7 @@ translate([0,0,0])
 /*
 TODO: Add space for button
 TODO: Add a locking mechanism in shaft using pinx
-TODO: Add space for E14 fitting 
+TODO: Add space for E14 fitting and cable 
 */
 
 translate([0,60,0])

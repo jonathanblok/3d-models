@@ -2,7 +2,7 @@ overall_width = 70.0;
 inside_width = 63.0;
 inside_depth = 0.0;
 base_height = 10.0;
-overall_height = 100.0;
+overall_height = 60.0;
 
 union(){
     // Top part and arm

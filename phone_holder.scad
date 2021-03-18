@@ -1,8 +1,11 @@
 overall_width = 70.0;
 inside_width = 63.0;
-inside_depth = 0.0;
+inside_depth = 11.0;
 base_height = 10.0;
 overall_height = 60.0;
+forward_depth = 24.0;
+
+wall_thickness = 0.5;
 
 union(){
     // Top part and arm
@@ -14,13 +17,19 @@ union(){
     }
     
     // "Hands" 
-    translate([25.0-3.0,10.0,0.0]) cube([3.0,4.0,2*base_height]);
-    translate([25.0-3.0,overall_width-4.0,0]) cube([3.0,4.0,2*base_height]);
+    translate([forward_depth-3.0,10.0,0.0]) cube([3.0,4.0,2*base_height]);
+    translate([forward_depth-3.0,overall_width-4.0,0]) cube([3.0,4.0,2*base_height]);
     
     // Main T-shape
-    cube([25.0,10.0,20.0]){}
-    translate([0,overall_width,0]) cube([25.0,10,20]){}    
-    translate([0,30,0]) cube([10,20,overall_height]){}
+    difference(){
+     union(){
+      cube([forward_depth,10.0,20.0]){}
+      translate([0,overall_width,0]) cube([forward_depth,10,20]){}    
+      translate([0,30,0]) cube([10,20,overall_height]){}
+     }
+     // subtract phone
+     translate([10.0,8.75,0]) cube([inside_depth, inside_width, 60]){}
+    }
     
     // back block insert 
     difference(){        
@@ -33,11 +42,12 @@ union(){
         translate([-31,25+bb_width/2-slot_width/2,-1]) cube([40,slot_width,15]){}    
     }
     
+    // foot
     difference(){
         translate([0,30,overall_height]){
-           cube([25,20,3]){}
+           cube([10.0+inside_depth,20,3]){}
         }
-        translate([15,32.5,overall_height-1]){
+        translate([inside_depth,32.5,overall_height-1]){
             cube([7,15,5]){}
         }
     }

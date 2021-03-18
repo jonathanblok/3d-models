@@ -1,5 +1,5 @@
 filament_profile = 0.2;
-center_radius = 3.5;
+center_radius = 3.6;
 outer_radius = 18.9;
 
 difference(){

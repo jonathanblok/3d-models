@@ -1,14 +1,14 @@
 include <lib/roundedcube.scad>
 
-length = 54.5;
+length = 57.2;
 width = 21.0;
 thickness = 3.0;
 
 first_lip_width = 15.0;
-first_lip_length = 3.0;
+first_lip_length = 3.7;
 
 second_lip_width = 10.5;
-second_lip_length = 2.5;
+second_lip_length = 4.5;
 second_lip_thickness = 1.5;
 
 back_lip_width = 7.0;

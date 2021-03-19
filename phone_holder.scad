@@ -5,7 +5,7 @@ base_height = 10.0;
 overall_height = 60.0;
 forward_depth = 24.0;
 
-wall_thickness = 0.5;
+wall_thickness = 5.0;
 
 union(){
     // Top part and arm
@@ -33,11 +33,12 @@ union(){
     
     // back block insert 
     difference(){        
-        bb_width = 30;
-        slot_width = 3;
+        bb_width = 30.0;
+        slot_width = 3.0;
+        bb_depth = 15.0;
         union(){
-            translate([-30,25,0]) cube([40,bb_width,10]){}    
-            translate([-30,25,10]) cube([2,bb_width,2]){}    
+            translate([-bb_depth,25,0]) cube([bb_depth,bb_width,10]){}    
+            translate([-bb_depth,25,10]) cube([2,bb_width,2]){}    
         }
         translate([-31,25+bb_width/2-slot_width/2,-1]) cube([40,slot_width,15]){}    
     }

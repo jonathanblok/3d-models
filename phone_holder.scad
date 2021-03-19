@@ -1,5 +1,5 @@
 overall_width = 70.0;
-inside_width = 63.0;
+inside_width = 65.0;
 inside_depth = 11.0;
 base_height = 10.0;
 overall_height = 60.0;
@@ -17,8 +17,9 @@ union(){
     }
     
     // "Hands" 
-    translate([forward_depth-3.0,10.0,0.0]) cube([3.0,4.0,2*base_height]);
-    translate([forward_depth-3.0,overall_width-4.0,0]) cube([3.0,4.0,2*base_height]);
+    hand_reach = 2.0;
+    translate([forward_depth-3.0,10.0-hand_reach,0.0]) cube([3.0,4.0,2*base_height]);
+    translate([forward_depth-3.0,overall_width-hand_reach,0]) cube([3.0,4.0,2*base_height]);
     
     // Main T-shape
     difference(){
@@ -28,7 +29,7 @@ union(){
       translate([0,30,0]) cube([10,20,overall_height]){}
      }
      // subtract phone
-     translate([10.0,8.75,0]) cube([inside_depth, inside_width, 60]){}
+     translate([10.0,7.75,0]) cube([inside_depth, inside_width, 60]){}
     }
     
     // back block insert 
@@ -45,11 +46,13 @@ union(){
     
     // foot
     difference(){
+        connector_port_width = 10.0;
+        
         translate([0,30,overall_height]){
            cube([10.0+inside_depth,20,3]){}
         }
-        translate([inside_depth,32.5,overall_height-1]){
-            cube([7,15,5]){}
+        translate([inside_depth,overall_width / 2.0,overall_height-1]){
+            cube([7,connector_port_width,5]){}
         }
     }
 } 

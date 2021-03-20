@@ -16,11 +16,6 @@ union(){
         //translate([0,offset_comp_inner_outer,-2]) cube([10,inside_width,20]){}
     }
     
-    // "Hands" 
-    hand_reach = 2.0;
-    translate([forward_depth-3.0,10.0-hand_reach,0.0]) cube([3.0,4.0,2*base_height]);
-    translate([forward_depth-3.0,overall_width-hand_reach,0]) cube([3.0,4.0,2*base_height]);
-    
     // Main T-shape
     difference(){
      union(){
@@ -29,7 +24,7 @@ union(){
       translate([0,30,0]) cube([10,20,overall_height]){}
      }
      // subtract phone
-     translate([10.0,7.75,0]) cube([inside_depth, inside_width, 60]){}
+     translate([10.0,7.75,-1]) cube([inside_depth, inside_width, 60]){}
     }
     
     // back block insert 

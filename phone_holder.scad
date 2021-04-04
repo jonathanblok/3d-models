@@ -1,5 +1,5 @@
 overall_width = 70.0;
-inside_width = 65.0;
+inside_width = 63.0;
 inside_depth = 11.0;
 base_height = 10.0;
 overall_height = 60.0;
@@ -24,14 +24,14 @@ union(){
       translate([0,30,0]) cube([10,20,overall_height]){}
      }
      // subtract phone
-     translate([10.0,7.75,-1]) cube([inside_depth, inside_width, 60]){}
+     translate([10.0,overall_width-inside_width+1.5,-1]) cube([inside_depth, inside_width, 60]){}
     }
     
     // back block insert 
     difference(){        
         bb_width = 30.0;
         slot_width = 3.0;
-        bb_depth = 15.0;
+        bb_depth = 22.0;
         union(){
             translate([-bb_depth,25,0]) cube([bb_depth,bb_width,10]){}    
             translate([-bb_depth,25,10]) cube([2,bb_width,2]){}    
